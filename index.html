@@ -436,6 +436,43 @@ html.lite body::after,html.lite .logo::after{display:none}
 #intro svg{filter:none}#intro.go .ic{filter:none}
 @keyframes iletter{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
 @keyframes wordUp{from{opacity:0;transform:translateY(50px) rotate(3deg)}to{opacity:1;transform:none}}
+
+/* ===== v6 : PRESISI + PERFORMA + ANIMASI BARU ===== */
+html{overflow-x:hidden}
+section,#showroom,#booth{scroll-margin-top:calc(72px + env(safe-area-inset-top,0px))}
+nav{padding-inline:max(5vw,calc((100% - 1300px)/2 + 5vw),env(safe-area-inset-left))}
+#gl-canvas,body::after{display:none!important}
+#aurora{position:fixed;inset:0;width:100%;height:100%;scale:1;contain:strict;will-change:opacity;animation:aur 16s ease-in-out infinite alternate!important}
+@keyframes aur{from{opacity:.5}to{opacity:1}}
+#dust{contain:strict}
+.btn{will-change:auto}
+.logo::after{display:none}
+.card::after,.tc.on::after{animation:none!important}
+.tc{content-visibility:auto;contain-intrinsic-size:auto 560px;transition:transform .35s cubic-bezier(.2,.8,.2,1),translate .8s cubic-bezier(.2,.9,.25,1),scale .8s cubic-bezier(.2,.9,.25,1),opacity .8s ease,border-color .3s,box-shadow .3s}
+.tc.pre{opacity:0;translate:0 40px;scale:.94}.tc.pre.in{opacity:1;translate:0 0;scale:1}
+.tc:active{scale:.98}
+.mq{contain:layout paint}.mq div{will-change:transform}
+.fc img{will-change:transform}
+.deco i{filter:none;text-shadow:0 8px 22px rgba(255,59,104,.55)}
+#cd{text-shadow:0 0 28px var(--acc)}
+@keyframes cdk{0%{transform:scale(2.2);opacity:0}35%{opacity:1}100%{transform:scale(.92);opacity:.9}}
+.tabs,.ths{padding-right:28px;scroll-snap-type:x proximity;overscroll-behavior-x:contain;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent)}
+.tab-btn,.th{scroll-snap-align:start}
+.chip,.tab-btn,.mpb{position:relative;overflow:hidden}
+.rip{position:absolute;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;pointer-events:none;background:rgba(255,255,255,.42);transform:scale(0);animation:rip .6s ease-out forwards}
+@keyframes rip{to{transform:scale(22);opacity:0}}
+#cta::after,#bGo:not(:disabled)::after{left:-70%;transition:none;animation:sweep 3.4s ease-in-out infinite}
+@keyframes sweep{0%,55%{transform:skewX(-20deg) translateX(0)}100%{transform:skewX(-20deg) translateX(560%)}}
+.stats{max-width:1300px;margin:0 auto;padding:7vh 5vw 0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:700px){.stats{grid-template-columns:repeat(2,1fr)}}
+.st{text-align:center;padding:20px 8px;border:1px solid var(--card-border);border-radius:22px;background:rgba(24,16,40,.6)}
+.st b{display:block;font:800 clamp(30px,6vw,52px) 'Syne',sans-serif;line-height:1;background:linear-gradient(100deg,var(--gold),var(--acc));-webkit-background-clip:text;background-clip:text;color:transparent}
+.st span{display:block;margin-top:8px;font-size:12px;font-weight:600;color:var(--mut)}
+.lite2 #aurora,.lite2 .fc img,.lite2 .deco i,.lite2 #cta::after,.lite2 #bGo::after{animation:none!important}
+.lite2 #dust,.lite2 .deco{display:none}
+@media(min-width:900px){.hero{min-height:min(86dvh,820px)}.deco i{font-size:clamp(26px,3vw,46px)}}
+.deco i:nth-child(1){--x:1%;--y:16%}.deco i:nth-child(2){--x:43%;--y:9%}.deco i:nth-child(3){--x:93%;--y:10%}.deco i:nth-child(4){--x:3%;--y:74%}.deco i:nth-child(5){--x:70%;--y:80%}
+.tab-btn,.chip,.mpb{flex-shrink:0}.tab-btn{white-space:nowrap}.tabs{padding-bottom:20px;margin-bottom:16px}
 </style>
 </head>
 <body>
@@ -457,6 +494,7 @@ html.lite body::after,html.lite .logo::after{display:none}
 
 <main>
 <section class="hero">
+  <div class="deco" aria-hidden="true"><i style="--x:4%;--y:10%;--d:0s">🎀</i><i style="--x:44%;--y:4%;--d:-2s">✨</i><i style="--x:88%;--y:14%;--d:-4s">📸</i><i style="--x:8%;--y:80%;--d:-1s">🧸</i><i style="--x:50%;--y:88%;--d:-3s">💖</i></div>
   <h1><span class="w" style="--i:0">Abadikan</span> <span class="w" style="--i:1">Momen,</span> <span class="w grad" style="--i:2">Tanpa</span> <span class="w grad" style="--i:3">Batas.</span></h1>
   <p>19 frame kolase polaroid estetik: Love & Couple, Disney, Superhero, Music Player, Newspaper, Instagram, hingga Pin Board vintage. Fotomu langsung masuk ke slot polaroid, lengkap dengan kemiringan dan tumpukan stikernya.</p>
   <div class="row">
@@ -468,6 +506,7 @@ html.lite body::after,html.lite .logo::after{display:none}
 
 <div class="mq"><div id="mqi"></div></div>
 <div class="mq rev"><div id="mqi2"></div></div>
+<div class="stats rv"><div class="st"><b data-n="19">0</b><span>Frame Estetik</span></div><div class="st"><b data-n="6">0</b><span>Filter Warna</span></div><div class="st"><b data-n="4">0</b><span>Efek Cahaya</span></div><div class="st"><b data-n="100" data-s="%">0</b><span>Langsung di Browser</span></div></div>
 
 <section id="showroom">
   <h2>Katalog <span class="grad">Frame Estetik Viral.</span></h2>
@@ -785,7 +824,7 @@ $('#mqi').innerHTML = (FRAMES.map(f => '<span>' + f.e + ' <b>' + f.name.toUpperC
 $('#mqi2').innerHTML = $('#mqi').innerHTML;
 
 (function sparkles(){
-  const cv = $('#gl-canvas'); if(!cv || RM || LOW) return;
+  const cv = $('#gl-canvas'); return;
   const x = cv.getContext('2d'), dpr = Math.min(devicePixelRatio || 1, 1.5), cols = ['#ff3b68', '#f7cb53', '#00f0ff', '#c77dff', '#ffffff'];
   const P = Array.from({ length: 20 }, () => ({ x: Math.random(), y: Math.random(), s: 3 + Math.random() * 9, v: 0.00008 + Math.random() * 0.00025, p: Math.random() * 6.28, c: cols[Math.random() * 5 | 0], k: Math.random() < 0.55 }));
   let W, H, last = 0; const rs = () => { W = cv.width = innerWidth * dpr; H = cv.height = innerHeight * dpr; }; rs(); addEventListener('resize', rs);
@@ -936,7 +975,7 @@ function renderCatalog(category = 'Semua', anim = false) {
   const list = category === 'Semua' ? FRAMES : FRAMES.filter(f => f.cat === category);
   list.forEach((fr, ix) => {
     const card = document.createElement('div');
-    card.className = 'tc' + (st.fr === fr.id ? ' on' : '') + (anim ? ' pop' : ''); card.style.setProperty('--i', Math.min(ix, 12));
+    card.className = 'tc' + (st.fr === fr.id ? ' on' : '') + (anim ? ' pop' : ''); card.style.setProperty('--i', Math.min(ix, 12)); card.dataset.id = fr.id;
     card.innerHTML = `<span class="badge-tag">${fr.badge}</span><span class="user-count">📷 ${fr.slots.length} foto</span>`;
     const pv = document.createElement('img'); pv.className = 'pv-canvas'; pv.alt = fr.name; pv.loading = 'lazy';
     pv.src = thumbOf(fr, 'pv', 420);
@@ -948,7 +987,7 @@ function renderCatalog(category = 'Semua', anim = false) {
       st.fr = fr.id;
       $('#vf').animate([{ transform: 'scale(0.92)', opacity: 0.5 }, { transform: 'scale(1)', opacity: 1 }], { duration: 600, easing: 'cubic-bezier(.3,1.5,.5,1)' });
       shots = shots.length ? [] : shots; $('#res').style.display = 'none';
-      syncUI(); again(); renderCatalog(category); go('#booth');
+      syncUI(); again(); markOn(); go('#booth');
     };
     card.append(pv, t, d, b);
     grid.append(card);
@@ -959,6 +998,7 @@ $$('.tab-btn').forEach(btn => {
 });
 
 const msg = t => $('#msg').textContent = t;
+const markOn = () => { $$('.tc').forEach(c => c.classList.toggle('on', c.dataset.id === st.fr)); $$('#fT .th').forEach(c => c.classList.toggle('on', c.dataset.id === st.fr)); };
 
 function chips(id, list, key, cb) {
   $(id).innerHTML = '';
@@ -975,13 +1015,13 @@ function frameThumbs() {
   $('#fT').innerHTML = '';
   FRAMES.forEach(fr => {
     const b = document.createElement('button');
-    b.className = 'th' + (fr.id === st.fr ? ' on' : '');
+    b.className = 'th' + (fr.id === st.fr ? ' on' : ''); b.dataset.id = fr.id;
     const im = document.createElement('img'); im.alt = fr.name; im.src = thumbOf(fr, 'th', 150);
     const nm = document.createElement('b'); nm.textContent = fr.name;
     b.append(im, nm);
     b.onclick = () => {
       if(online && !host) return msg('Frame dikontrol oleh pembuat ruangan.');
-      st.fr = fr.id; frameThumbs(); acc(); again(); dots(); renderCatalog($('.tab-btn.on').dataset.cat);
+      st.fr = fr.id; markOn(); acc(); again(); dots();
     };
     $('#fT').append(b);
   });
@@ -990,7 +1030,8 @@ function frameThumbs() {
 
 function acc() { document.documentElement.style.setProperty('--acc', cur().ac); }
 
-const again = () => { bc(); fillShots(); if(shots.length && !busy) compose(); };
+let _ct; const composeSoon = () => { clearTimeout(_ct); _ct = setTimeout(() => requestAnimationFrame(compose), 180); };
+const again = () => { bc(); fillShots(); if(shots.length && !busy) composeSoon(); };
 function fillShots() {
   if(!shots.length) return;
   const n = N(); let i = 0;
@@ -1059,7 +1100,7 @@ const dots = () => {
 const pop = t => {
   const e = $('#cd'); e.textContent = t;
   AudioEngine.beep(880, 0.12);
-  e.animate([{ transform: 'scale(2.6)', opacity: 0, filter: 'blur(14px)' }, { transform: 'scale(1)', opacity: 1, filter: 'blur(0)', offset: 0.35 }, { transform: 'scale(0.9)', opacity: 0.15 }], { duration: 880, easing: 'cubic-bezier(.2,.9,.3,1)' });
+  e.animate([{ transform: 'scale(2.6)', opacity: 0 }, { transform: 'scale(1)', opacity: 1, offset: 0.35 }, { transform: 'scale(0.9)', opacity: 0.15 }], { duration: 880, easing: 'cubic-bezier(.2,.9,.3,1)' });
 };
 
 $('#bCam').onclick = async () => {
@@ -1182,7 +1223,7 @@ function compose() {
     x.restore();
   }
   if(window._cf) x.drawImage(window._cf, 0, 0, W, H);
-  $('#img').src = c.toDataURL('image/png');
+  c.toBlob(b => { if(!b) return; const fr = new FileReader(); fr.onload = () => { $('#img').src = fr.result; }; fr.readAsDataURL(b); }, 'image/png');
   window._out = c;
 }
 
@@ -1193,7 +1234,7 @@ function show() {
     $('#img').animate([{ transform: 'translateY(-104%) rotate(-2deg)', clipPath: 'inset(0 0 100% 0)' }, { transform: 'translateY(0) rotate(0deg)', clipPath: 'inset(0 0 0% 0)' }], { duration: 1900, easing: 'cubic-bezier(.22,.9,.28,1)' });
     $('.dispenser-slot').animate([{ transform: 'translateX(0)' }, { transform: 'translateX(-2px)' }, { transform: 'translateX(2px)' }, { transform: 'translateX(0)' }], { duration: 120, iterations: 14 });
     $('#holoGlint').animate([{ opacity: 0 }, { opacity: 0.9 }, { opacity: 0.7 }], { duration: 2600, delay: 1500 });
-    if(window.confetti) setTimeout(() => confetti({ particleCount: 90, spread: 80, origin: { y: 0.7 }, colors: ['#ff3b68', '#f7cb53', '#00f0ff', '#c77dff'] }), 1300);
+    if(window.confetti) setTimeout(() => confetti({ useWorker: false, particleCount: 90, spread: 80, origin: { y: 0.7 }, colors: ['#ff3b68', '#f7cb53', '#00f0ff', '#c77dff'] }), 1300);
   }
   $('#resContainer').onpointermove = e => {
     const r = $('#resContainer').getBoundingClientRect();
@@ -1493,7 +1534,7 @@ function buildFan() {
 $('#fan').addEventListener('pointermove', e => { const r = e.currentTarget.getBoundingClientRect(); e.currentTarget.style.setProperty('--px', ((e.clientX - r.left) / r.width - .5) * 2); e.currentTarget.style.setProperty('--py', ((e.clientY - r.top) / r.height - .5) * 2); });
 $('#fan').onclick = e => e.currentTarget.classList.toggle('open');
 $('#tg').addEventListener('pointermove', e => {
-  const c = e.target.closest('.tc'); if(!c) return; const r = c.getBoundingClientRect(), px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
+  const c = e.target.closest('.tc'); if(!c || e.pointerType !== 'mouse' || c._t) return; c._t = 1; requestAnimationFrame(() => c._t = 0); const r = c.getBoundingClientRect(), px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
   c.style.setProperty('--ry', (px - .5) * 14 + 'deg'); c.style.setProperty('--rx', (.5 - py) * 14 + 'deg'); c.style.setProperty('--mx', px * 100 + '%'); c.style.setProperty('--my', py * 100 + '%');
 });
 $('#tg').addEventListener('pointerout', e => { const c = e.target.closest('.tc'); if(c) { c.style.removeProperty('--rx'); c.style.removeProperty('--ry'); } });
@@ -1510,13 +1551,13 @@ addEventListener('pointerdown', e => {
 }, { passive: true });
 
 /* ---------- Init ---------- */
-modes(); renderCatalog('Semua', true);
+modes();
 chips('#fF', Object.keys(FIL), 'f', again);
 chips('#fL', Object.keys(LIGHTS), 'light', () => $('#fL').onclick());
 Promise.all(FRAMES.map(f => f.img.decode().catch(() => {}))).then(() => {
   frameThumbs(); acc(); renderCatalog(); dots(); buildFan();
 });
-frameThumbs(); acc(); dots();
+acc();
 </script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
@@ -1538,7 +1579,6 @@ if(!RMo&&!TOUCH&&window.Lenis){const ln=new Lenis({lerp:.085,wheelMultiplier:.95
 if(!RMo&&window.gsap&&window.ScrollTrigger){
  gsap.to('#fan',{yPercent:-10,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:.8}});
  gsap.to('.hero h1',{yPercent:-14,opacity:.25,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom 20%',scrub:.8}});
- qa('.mq div').forEach((m,i)=>gsap.to(m,{x:(i?-1:1)*60,ease:'none',scrollTrigger:{trigger:m,start:'top bottom',end:'bottom top',scrub:1}}));
  qa('section h2').forEach(h=>gsap.from(h,{clipPath:'inset(0 0 100% 0)',y:50,opacity:0,duration:1.1,ease:'power4.out',scrollTrigger:{trigger:h,start:'top 88%',once:true,onEnter:()=>h.classList.add('lux-in')}}));
 }else qa('section h2').forEach(h=>h.classList.add('lux-in'));
 if(TOUCH&&window.ScrollTrigger)ScrollTrigger.getAll().forEach(t=>{if(t.vars.scrub)t.kill(true)});
@@ -1558,9 +1598,9 @@ if(!RMo){const c=d.createElement('canvas');c.id='dust';d.body.prepend(c);const x
  let W,H;const rs=()=>{W=c.width=innerWidth;H=c.height=innerHeight};rs();addEventListener('resize',rs);
  const mk=col=>{const s=d.createElement('canvas');s.width=s.height=48;const g=s.getContext('2d'),r=g.createRadialGradient(24,24,0,24,24,24);r.addColorStop(0,col+'1)');r.addColorStop(.35,col+'.35)');r.addColorStop(1,col+'0)');g.fillStyle=r;g.fillRect(0,0,48,48);return s};
  const S=[mk('rgba(247,203,83,'),mk('rgba(255,143,168,')];
- const P=Array.from({length:TOUCH?16:46},()=>({x:Math.random()*W,y:Math.random()*H,r:6+Math.random()*14,v:8+Math.random()*22,p:Math.random()*6.28,s:S[Math.random()<.25?1:0]}));
+ const P=Array.from({length:TOUCH?9:30},()=>({x:Math.random()*W,y:Math.random()*H,r:4+Math.random()*9,v:8+Math.random()*22,p:Math.random()*6.28,s:S[Math.random()<.25?1:0]}));
  let last=performance.now();
- (function f(t){requestAnimationFrame(f);if(d.hidden){last=t;return}const dt=Math.min((t-last)/1000,.05);last=t;x.clearRect(0,0,W,H);
+ (function f(t){requestAnimationFrame(f);if(d.hidden||window.__fxStop){last=t;return}if(TOUCH&&t-last<30)return;const dt=Math.min((t-last)/1000,.05);last=t;x.clearRect(0,0,W,H);
  for(const p of P){p.y-=p.v*dt;if(p.y<-30){p.y=H+30;p.x=Math.random()*W}let px=p.x+Math.sin(t/1800+p.p)*14,py=p.y;
   if(!TOUCH){const dx=px-mx,dy=py-my,ds=Math.hypot(dx,dy);if(ds>0&&ds<140){const k=(1-ds/140)*40;px+=dx/ds*k;py+=dy/ds*k}}
   const rr=p.r*(1+(+window.musLevel||0));x.globalAlpha=.35+.45*Math.abs(Math.sin(t/900+p.p));x.drawImage(p.s,px-rr,py-rr,rr*2,rr*2)}
@@ -1574,7 +1614,7 @@ const rs=q('#res');if(rs)new MutationObserver(()=>{if(rs.style.display==='block'
 </script>
 <script>
 (function(){var h=document.documentElement,el=document.getElementById('intro');if(!el)return;
-var done=false,t0=performance.now(),D=2900,bar=document.getElementById('ibar'),num=document.getElementById('inum');
+var done=false,t0=performance.now(),D=(function(){try{if(sessionStorage.getItem('sb'))return 800;sessionStorage.setItem('sb','1')}catch(e){}return 2200})(),bar=document.getElementById('ibar'),num=document.getElementById('inum');
 var ln=function(){return window.lenis};if(ln())ln().stop();
 function fin(){h.classList.remove('intro');if(ln())ln().start();window.scrollTo(0,0);setTimeout(function(){el.remove()},1300)}
 function end(fast){if(done)return;done=true;bar.style.transform='scaleX(1)';num.textContent='100';el.classList.add('go');
@@ -1587,6 +1627,25 @@ setTimeout(function(){if(!done)end(true)},7000);
 <script>
 ['gesturestart','gesturechange','gestureend'].forEach(function(n){document.addEventListener(n,function(e){e.preventDefault()},{passive:false})});
 document.addEventListener('touchmove',function(e){if(e.touches.length>1&&e.cancelable)e.preventDefault()},{passive:false});
+</script>
+<script>
+/* ===== v6 : monitor performa adaptif + animasi tambahan ===== */
+(function(){
+var H=document.documentElement,RMq=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function lite2(){H.classList.add('lite2');window.__fxStop=true}
+try{navigator.getBattery&&navigator.getBattery().then(function(b){if(!b.charging&&b.level<=.3)lite2()})}catch(e){}
+var n=0,sum=0,last=performance.now(),t0=last;
+(function f(t){var dt=t-last;last=t;if(t-t0>3200){if(dt<200){sum+=dt;n++}if(n>=90){if(sum/n>27)lite2();return}}requestAnimationFrame(f)})(last);
+var q=function(s){return document.querySelector(s)};
+/* hitung angka */
+var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;cio.unobserve(e.target);var el=e.target,to=+el.dataset.n,sf=el.dataset.s||'',s0=performance.now();if(RMq){el.textContent=to+sf;return}(function g(t){var p=Math.min((t-s0)/1400,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)))+sf;if(p<1)requestAnimationFrame(g)})(s0)})},{threshold:.6});
+document.querySelectorAll('.st b').forEach(function(b){cio.observe(b)});
+/* kartu katalog muncul bertahap saat di-scroll */
+var tio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var c=e.target;tio.unobserve(c);c.style.transitionDelay=(c._i%3)*90+'ms';c.classList.add('in');setTimeout(function(){c.style.transitionDelay=''},1000)})},{threshold:.08,rootMargin:'0px 0px -6% 0px'});
+new MutationObserver(function(ms){ms.forEach(function(m){m.addedNodes.forEach(function(c){if(c.classList&&c.classList.contains('tc')&&!c.classList.contains('pop')){c._i=[].indexOf.call(c.parentNode.children,c);c.classList.add('pre');tio.observe(c)}})})}).observe(q('#tg'),{childList:true});
+/* ripple sentuhan */
+addEventListener('pointerdown',function(e){var b=e.target.closest&&e.target.closest('.btn,.chip,.tab-btn,.mpb');if(!b||b.disabled)return;var r=b.getBoundingClientRect(),s=document.createElement('i');s.className='rip';s.style.left=e.clientX-r.left+'px';s.style.top=e.clientY-r.top+'px';b.append(s);setTimeout(function(){s.remove()},650)},{passive:true});
+})();
 </script>
 </body>
 </html>
